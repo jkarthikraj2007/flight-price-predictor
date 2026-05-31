@@ -1,4 +1,9 @@
-import streamlit as st
+import os
+
+import streamlit
+if not os.path.exists("model.pkl"):
+    import train
+    import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
